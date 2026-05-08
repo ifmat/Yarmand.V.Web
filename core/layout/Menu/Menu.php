@@ -1,7 +1,9 @@
 <aside class="col-md-3 col-lg-2 bg-light border-start navbar-expand-lg p-3 d-flex flex-column align-items-center position-fixed end-0 top-0 min-vh-100">
     <div class="text-center mb-3">
-        <div class="rounded-circle bg-secondary" style="width:80px; height:80px;"></div>
-        <div class="border mt-2 p-1">نام کاربر</div>
+        <div class=" w-100 h-25" >
+            <img src="assets/images/avatar.png" class="w-25 bg-success justify-content-center align-items-center rounded rounded-circle">
+<!--        </div>-->
+        <div class=" mt-2 p-1">نام کاربر</div>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
