@@ -15,12 +15,6 @@
 @import url(../vendor_components/animate/animate.css);
 
 
-
-
-
-
-
-
 html {
     height: 100%;
     font-size: 14px;
@@ -28,12 +22,34 @@ html {
 
 body {
     height: 100%;
-    width:100%;
+    width: 100%;
 }
 
 body.layout-boxed {
     height: 100%;
 }
-.without-bullets{
+
+.without-bullets {
     list-style-type: none;
+    padding-left: 1;
+    margin-left: 1;
 }
+
+.menu {
+    padding: 8px 15px;
+}
+
+.menu > Ul > li > a {
+    background: white;
+    object-fit: cover;
+    border: 1px solid #198754;
+    box-shadow: 0 1px 2px rgba(33, 37, 41, 0.1);
+    border-radius: 1vh;
+}
+
+.menu > Ul > li > a:hover {
+    color: #198754;
+    padding: 1vh;
+    transition: 60ms;
+}
+
