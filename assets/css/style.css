@@ -34,3 +34,6 @@ body {
 body.layout-boxed {
     height: 100%;
 }
+.without-bullets{
+    list-style-type: none;
+}
