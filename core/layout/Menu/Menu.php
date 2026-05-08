@@ -9,19 +9,18 @@
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <nav class="w-100">
-        <ul class="without-bullets">
-            <li><a href="#" class="btn btn-outline-success border-dark text-dark w-100 mb-2 ">منو ۱</a>
+    <nav class="w-100 menu">
+        <ul class="without-bullets justify-content-center align-items-center mx-auto">
+            <li><a href="#" class="btn btn-outline-success border-dark text-dark w-100 mb-2 "><span class="fa-solid fa-house"> home</span></a>
             </li>
-            <li><a href="#" class="btn btn-outline-success border-dark text-dark w-100 mb-2 ">منو ۱</a>
+            <li><a href="#" class="btn btn-outline-success border-dark text-dark w-100 mb-2 "><span class="fa-solid fa-user"> home</span></a>
             </li>
-            <li><a href="#" class="btn btn-outline-success border-dark text-dark w-100 mb-2 ">منو ۱</a>
+            <li><a href="#" class="btn btn-outline-success border-dark text-dark w-100 mb-2 "><span class="fa-solid fa-chart-line"> home</span></a>
             </li>
-            <li><a href="#" class="btn btn-outline-success border-dark text-dark w-100 mb-2 ">منو ۱</a>
+            <li><a href="#" class="btn btn-outline-success border-dark text-dark w-100 mb-2 "><span class="fa-solid fa-gear"> home</span></a>
             </li>
-            <li><a href="#" class="btn btn-outline-success border-dark text-dark w-100 mb-2 ">منو ۱</a>
+            <li><a href="#" class="btn btn-outline-success border-danger text-danger w-100 mb-2 "><span class="fa-solid fa-right-from-bracket"> home</span></a>
             </li>
-
         </ul>
 
     </nav>
