@@ -4,10 +4,10 @@ export function setLanguage(lang) {
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === "fa" ? "rtl" : "ltr";
 
-    const elements = document.querySelectorAll("[data-i18n]");
+    const elements = document.querySelectorAll("[Multi_Lang]");
 
     elements.forEach((el) => {
-        const key = el.getAttribute("data-i18n");
+        const key = el.getAttribute("Multi_Lang");
 
         if (translations[lang] && translations[lang][key]) {
             el.textContent = translations[lang][key];
