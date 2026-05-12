@@ -13,7 +13,7 @@
     </button>
     <nav class="w-100 menu">
         <ul class="without-bullets justify-content-center align-items-center mx-auto">
-            <li><a href="#" class="btn btn-outline-success border-dark text-dark w-100 mb-2 "><span class="fa-solid fa-house" Multi_Lang="item_menu"> </span></a>
+            <li><a href="#" class="btn btn-outline-success border-dark text-dark w-100 mb-2 "><span class="fa-solid fa-house" Multi_Lang="traneh" ></span></a>
             </li>
             <li><a href="#" class="btn btn-outline-success border-dark text-dark w-100 mb-2 "><span class="fa-solid fa-user" Multi_Lang="item_menu"></span></a>
             </li>
