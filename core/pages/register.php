@@ -1,12 +1,7 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+<?php
+require_once '../layout/Html/StartHtml.php';
+require_once '../layout/Head/Head.php';
+?>
 <body>
 <style>
     body {
@@ -14,6 +9,7 @@
         align-items: flex-start; /* قبلاً center بود */
         justify-content: center;
         padding-top: 10vh; /* فاصله از بالا */
+        height: 100%;
     }
 
     @keyframes gradientMove {
@@ -119,30 +115,25 @@
 
     <div class="login-body">
         <form action="chek_user" method="post">
-            <div class="input-group mb-3">
-                <input name="user" id="user" type="number" class="form-control ps-15"
+            <div class="input-group mb-3 ">
+                <input name="user" id="user" type="number" class="form-control ps-15 border border-1 border-dark"
                        placeholder="نام کاربری" style="direction: rtl;">
-                <span class="input-group-text"><i class="ti-user"></i></span>
+                <span class="input-group-text border "><i class="fa-solid fa-user text-dark"></i></span>
             </div>
 
             <div class="input-group mb-3">
-                <input id="pass" name="pass" type="password" class="form-control ps-15"
+                <input id="pass" name="pass" type="password" class="form-control ps-15 border border-1 border-dark"
                        placeholder="رمز عبور" style="direction: rtl;">
-                <span class="input-group-text toggle-password"><i class="ti-eye"></i></span>
+                <span class="input-group-text toggle-password border"><i class="fa-solid fa-eye text-dark"></i></span>
             </div>
-
-            <div class="captcha-box">
-                <img src="captcha?rand=<?=time()?>" alt="captcha" id="captcha_image" style="height:100%; border-radius:8px;">
-
-                <i class="ti-reload refresh-captcha"></i>
-            </div>
-
-            <input type="text" name="captcha_input" id="captcha_input"
-                   class="form-control mt-2" placeholder="کد امنیتی را وارد کنید" required>
-
             <button type="submit" name="login" class="btn btn-login">ورود</button>
         </form>
     </div>
 </div>
+<?php
+require_once '../layout/Js/Js.php';
+?>
 </body>
-</html>
+<?php
+require_once '../layout/Html/EndHtml.php';
+?>
