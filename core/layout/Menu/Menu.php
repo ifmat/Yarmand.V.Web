@@ -1,6 +1,6 @@
-<aside class="sidebar col-md-3 col-lg-2 position-fixed end-0 top-0 min-vh-100 d-flex flex-column">
+<aside class="sidebar sidebarToggleBtn col-md-3 col-lg-2 position-fixed end-0 top-0 min-vh-100 d-flex flex-column">
 
-    <div class="sidebar-header text-center">
+    <div class="sidebar-header sidebar text-center">
         <div class="lang-switch mb-3">
             <button id="btn-fa" class="btn btn-sm btn-outline-light">فارسی</button>
             <button id="btn-en" class="btn btn-sm btn-outline-light">English</button>
