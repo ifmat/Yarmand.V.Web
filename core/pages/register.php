@@ -54,7 +54,7 @@ require_once '../layout/Head/Head.php';
         border-color: #00ec9d;
         box-shadow: 0 0 10px rgba(0, 236, 157, 0.3);
     }
-    .form-control::placeholder { color: rgba(255, 255, 255, 0.7); }
+    .form-control::placeholder { color: black; }
     .input-group-text {
         background: rgba(255, 255, 255, 0.1);
         border: none;
@@ -94,13 +94,8 @@ require_once '../layout/Head/Head.php';
         color: #00ec9d;
         transform: rotate(90deg);
     }
-    footer {
-        position: absolute;
-        bottom: 10px;
-        width: 100%;
-        text-align: center;
-        color: #ccc;
-        font-size: 13px;
+    input{
+        background: #00ec9d;
     }
     @media (max-width: 768px) {
         .login-body { padding: 25px 20px; }
@@ -118,13 +113,13 @@ require_once '../layout/Head/Head.php';
             <div class="input-group mb-3 ">
                 <input name="user" id="user" type="number" class="form-control ps-15 border border-1 border-dark"
                        placeholder="نام کاربری" style="direction: rtl;">
-                <span class="input-group-text border "><i class="fa-solid fa-user text-dark"></i></span>
+                <span class="input-group-text border" style="background: #00ec9d"><i class="fa-solid fa-user text-dark"></i></span>
             </div>
 
-            <div class="input-group mb-3">
-                <input id="pass" name="pass" type="password" class="form-control ps-15 border border-1 border-dark"
-                       placeholder="رمز عبور" style="direction: rtl;">
-                <span class="input-group-text toggle-password border"><i class="fa-solid fa-eye text-dark"></i></span>
+            <div class="input-group mb-3 text-dark">
+                <input id="pass" name="pass" type="password" class="form-control ps-15 border border-1 border-dark text-dark text-danger"
+                       placeholder="رمز عبور" style="direction: rtl">
+                <span class="input-group-text toggle-password border" style=" background: #00ec9d" ><i class="fa-solid fa-eye text-dark"></i></span>
             </div>
             <button type="submit" name="login" class="btn btn-login">ورود</button>
         </form>
