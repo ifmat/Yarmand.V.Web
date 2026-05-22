@@ -296,19 +296,9 @@ body {
    border: 2px solid red;
     border-radius: 2vh;
 }
-
-/*.bg-gradient-green {*/
-/*    background: linear-gradient(135deg, #00ec9d, #00b894);*/
-/*}*/
-
-/*.btn-gradient-green {*/
-/*    background: linear-gradient(135deg, #00ec9d, #00b894);*/
-/*}*/
-
-/*.card-glass {*/
-/*    backdrop-filter: blur(20px);*/
-/*    background: rgba(255, 255, 255, 0.15);*/
-/*}*/
+.Register-Page select {
+    direction: rtl;
+}
 
 .Register-Page .card {
     backdrop-filter: blur(20px);
