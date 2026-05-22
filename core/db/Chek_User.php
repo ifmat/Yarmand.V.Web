@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $FirstName = $_POST['firstname'] ?? '';
         $LastName  = $_POST['lastname'] ?? '';
         $Role      = (int)($_POST['role'] ?? 1);
-        $Email     = $_POST['email'] ?? '';
+        $Email     = $_POST['Email'] ?? '';
         $Password  = $_POST['pass'] ?? '';
         $Status    = 1;
 
