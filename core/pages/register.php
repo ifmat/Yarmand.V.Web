@@ -2,133 +2,82 @@
 require_once '../layout/Html/StartHtml.php';
 require_once '../layout/Head/Head.php';
 ?>
-<body>
-<style>
-    body {
-        display: flex;
-        align-items: flex-start; /* قبلاً center بود */
-        justify-content: center;
-        padding-top: 10vh; /* فاصله از بالا */
-        height: 100%;
-    }
+    <body class="bg-gradient min-vh-100 d-flex align-items-start justify-content-center Register-Page">
 
-    @keyframes gradientMove {
-        0% {background-position: 0% 50%;}
-        50% {background-position: 100% 50%;}
-        100% {background-position: 0% 50%;}
-    }
-    .login-card {
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(20px);
-        border-radius: 18px;
-        box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
-        width: 100%;
-        max-width: 420px;
-        overflow: hidden;
-        animation: fadeIn 1s ease forwards;
-        transform: translateY(30px);
-        opacity: 0;
-    }
-    @keyframes fadeIn {
-        to { transform: translateY(0); opacity: 1; }
-    }
-    .login-header {
-        background: linear-gradient(135deg, #00ec9d, #00b894);
-        padding: 25px;
-        text-align: center;
-        color: #fff;
-    }
-    .login-header i { font-size: 45px; margin-bottom: 10px; }
-    .login-header h2 { margin: 0; font-size: 22px; font-weight: 700; }
-    .login-body { padding: 35px 30px; color: #fff; text-align: center; }
-    .form-control {
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 10px;
-        color: #fff;
-        height: 45px;
-        transition: 0.3s;
-    }
-    .form-control:focus {
-        background: rgba(255, 255, 255, 0.2);
-        border-color: #00ec9d;
-        box-shadow: 0 0 10px rgba(0, 236, 157, 0.3);
-    }
-    .form-control::placeholder { color: black; }
-    .input-group-text {
-        background: rgba(255, 255, 255, 0.1);
-        border: none;
-        color: #fff;
-    }
-    .btn-login {
-        background: linear-gradient(135deg, #00ec9d, #00b894);
-        border: none;
-        color: #fff;
-        font-weight: 600;
-        width: 100%;
-        border-radius: 12px;
-        height: 45px;
-        transition: all 0.3s ease;
-        margin-top: 10px;
-    }
-    .btn-login:hover {
-        background: linear-gradient(135deg, #00b894, #00ec9d);
-        transform: translateY(-2px);
-        box-shadow: 0 4px 15px rgba(0, 236, 157, 0.4);
-    }
-    .captcha-box {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
-        padding: 5px 10px;
-        margin-top: 10px;
-    }
-    .refresh-captcha {
-        color: #fff;
-        cursor: pointer;
-        transition: 0.3s;
-    }
-    .refresh-captcha:hover {
-        color: #00ec9d;
-        transform: rotate(90deg);
-    }
-    input{
-        background: #00ec9d;
-    }
-    @media (max-width: 768px) {
-        .login-body { padding: 25px 20px; }
-    }
-</style>
+    <div class="container">
+        <div class="row justify-content-center ">
+            <div class="col-11 col-sm-8 col-md-7 col-lg-7 col-xl-6">
 
-<div class="login-card">
-    <div class="login-header">
-        <i class="ti-lock"></i>
-        <h2>ورود به سامانه</h2>
+                <!-- کارت ثبت نام / ورود -->
+                <div class="card border-0 shadow-lg rounded-4 overflow-hidden Register-main">
+
+                    <!-- هدر کارت -->
+                    <div class="card-header text-center py-4 border-0"
+                         style="background: linear-gradient(135deg, #00ec9d, #00b894);">
+                        <i class="ti-lock display-5 text-white"></i>
+                        <h2 class="text-white mt-2 mb-0 fw-bold">ورود به سامانه</h2>
+                    </div>
+
+                    <!-- بدنه کارت -->
+                    <div class="card-body p-4 p-xl-5">
+                        <form action="chek_user" method="post">
+
+                            <!-- فیلد نام کاربری -->
+                            <div class="input-group mb-4">
+                                <input name="user" id="user" type="number"
+                                       class="form-control form-control-lg rounded-3  text-dark "
+                                       placeholder="نام کاربری">
+                                <span class="input-group-text rounded-3 border-0">
+                                <i class="fa-solid fa-user text-dark"></i>
+                            </span>
+                            </div>
+
+                            <!-- فیلد رمز عبور -->
+                            <div class="input-group mb-4 ">
+                                <input id="pass" name="pass" type="password"
+                                       class="form-control form-control-lg rounded-3 "
+                                       placeholder="رمز عبور">
+                                <span class="input-group-text toggle-password rounded-3 border-0">
+                                <i class="fa-solid fa-eye text-dark"></i>
+                            </span>
+                            </div>
+
+                            <!-- دکمه ورود -->
+                            <button type="submit" name="login"
+                                    class="btn w-100 py-2 fw-bold text-white border-0 rounded-3"
+                                    style="">
+                                ورود
+                            </button>
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
     </div>
 
-    <div class="login-body">
-        <form action="chek_user" method="post">
-            <div class="input-group mb-3 ">
-                <input name="user" id="user" type="number" class="form-control ps-15 border border-1 border-dark"
-                       placeholder="نام کاربری" style="direction: rtl;">
-                <span class="input-group-text border" style="background: #00ec9d"><i class="fa-solid fa-user text-dark"></i></span>
-            </div>
+    <script>
+        document.querySelector('.toggle-password')?.addEventListener('click', function () {
+            let passInput = document.querySelector('#pass');
+            let icon = this.querySelector('i');
 
-            <div class="input-group mb-3 text-dark">
-                <input id="pass" name="pass" type="password" class="form-control ps-15 border border-1 border-dark text-dark text-danger"
-                       placeholder="رمز عبور" style="direction: rtl">
-                <span class="input-group-text toggle-password border" style=" background: #00ec9d" ><i class="fa-solid fa-eye text-dark"></i></span>
-            </div>
-            <button type="submit" name="login" class="btn btn-login">ورود</button>
-        </form>
-    </div>
-</div>
-<?php
-require_once '../layout/Js/Js.php';
-?>
-</body>
+            if (passInput.type === 'password') {
+                passInput.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                passInput.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        });
+    </script>
+    <?php
+    require_once '../layout/Js/Js.php';
+    ?>
+    </body>
 <?php
 require_once '../layout/Html/EndHtml.php';
 ?>

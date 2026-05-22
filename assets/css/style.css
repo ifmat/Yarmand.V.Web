@@ -129,8 +129,9 @@ body {
 .menu-item.logout:hover {
     background-color: rgba(248, 113, 113, 0.15);
 }
+
 /* sidebar base */
-.sidebar{
+.sidebar {
     background: linear-gradient(180deg, #1e293b, #0f172a);
     width: 250px;
     right: 0;
@@ -139,22 +140,23 @@ body {
 }
 
 /* on small screens: hide by default (collapsed) */
-@media (max-width: 991.98px){
-    .sidebar{
+@media (max-width: 991.98px) {
+    .sidebar {
         transform: translateX(100%); /* جمع */
     }
-    .sidebar.open{
+
+    .sidebar.open {
         transform: translateX(0); /* باز */
     }
 }
 
 /* toggle button (three dots) */
-.sidebarToggleBtn{
+.sidebarToggleBtn {
     /* nothing here; just keeping your class */
 }
 
-@media (max-width: 991.98px){
-    .sidebarToggleBtn{
+@media (max-width: 991.98px) {
+    .sidebarToggleBtn {
         /* sidebar is handled above */
     }
 
@@ -162,7 +164,7 @@ body {
 }
 
 /* واقعی: دکمه رو با یک عنصر HTML اضافه می‌کنیم (در JS) */
-#sidebarToggleBtn{
+#sidebarToggleBtn {
     position: fixed;
     top: 14px;
     right: 14px;
@@ -176,8 +178,8 @@ body {
     height: 42px;
     border-radius: 10px;
 
-    border: 1px solid rgba(255,255,255,.15);
-    background: rgba(15,23,42,.85);
+    border: 1px solid rgba(255, 255, 255, .15);
+    background: rgba(15, 23, 42, .85);
     color: #fff;
 
     backdrop-filter: blur(8px);
@@ -186,11 +188,18 @@ body {
     cursor: pointer;
     transition: transform .12s ease, background .2s ease;
 }
-#sidebarToggleBtn:hover{ background: rgba(15,23,42,.95); }
-#sidebarToggleBtn:active{ transform: scale(0.98); }
+
+#sidebarToggleBtn:hover {
+    background: rgba(15, 23, 42, .95);
+}
+
+#sidebarToggleBtn:active {
+    transform: scale(0.98);
+}
+
 /* header */
 
-.main-header{
+.main-header {
     position: sticky;
     top: 0;
     height: 70px;
@@ -205,27 +214,27 @@ body {
 
 /* logo */
 
-.logo{
+.logo {
     font-size: 18px;
     color: #0f172a;
 }
 
 /* menu */
 
-.header-menu a{
+.header-menu a {
     text-decoration: none;
     color: #334155;
     font-size: 14px;
     transition: .2s;
 }
 
-.header-menu a:hover{
+.header-menu a:hover {
     color: #22c55e;
 }
 
 /* search */
 
-.search-box input{
+.search-box input {
     border: 1px solid #e2e8f0;
     border-radius: 8px;
     padding: 6px 10px;
@@ -233,34 +242,76 @@ body {
     width: 160px;
 }
 
-.search-box input:focus{
+.search-box input:focus {
     outline: none;
     border-color: #22c55e;
 }
 
 /* icons */
 
-.action-icon{
+.action-icon {
     font-size: 16px;
     color: #475569;
     cursor: pointer;
     transition: .2s;
 }
 
-.action-icon:hover{
+.action-icon:hover {
     color: #22c55e;
 }
 
 /* responsive */
 
-@media (max-width: 991px){
+@media (max-width: 991px) {
 
-    .main-header{
+    .main-header {
         margin-right: 0;
     }
 
-    .search-box{
-        display:none;
+    .search-box {
+        display: none;
     }
+
+}
+
+.Register-Page {
+    padding-top: 10vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.Register-Page input {
+    direction: rtl;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.Register-Page span {
+    background: #00ec9d;
+}
+
+.Register-Page button {
+    background: linear-gradient(135deg, #00ec9d, #00b894);
+    transition: all 0.3s ease;
+}
+.Register-Page .Register-main {
+   border: 2px solid red;
+    border-radius: 2vh;
+}
+
+/*.bg-gradient-green {*/
+/*    background: linear-gradient(135deg, #00ec9d, #00b894);*/
+/*}*/
+
+/*.btn-gradient-green {*/
+/*    background: linear-gradient(135deg, #00ec9d, #00b894);*/
+/*}*/
+
+/*.card-glass {*/
+/*    backdrop-filter: blur(20px);*/
+/*    background: rgba(255, 255, 255, 0.15);*/
+/*}*/
+
+.Register-Page .card {
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.15);
 
 }
