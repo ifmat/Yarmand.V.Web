@@ -188,3 +188,79 @@ body {
 }
 #sidebarToggleBtn:hover{ background: rgba(15,23,42,.95); }
 #sidebarToggleBtn:active{ transform: scale(0.98); }
+/* header */
+
+.main-header{
+    position: sticky;
+    top: 0;
+    height: 70px;
+
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+
+    z-index: 998;
+
+    margin-right: 250px;
+}
+
+/* logo */
+
+.logo{
+    font-size: 18px;
+    color: #0f172a;
+}
+
+/* menu */
+
+.header-menu a{
+    text-decoration: none;
+    color: #334155;
+    font-size: 14px;
+    transition: .2s;
+}
+
+.header-menu a:hover{
+    color: #22c55e;
+}
+
+/* search */
+
+.search-box input{
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 13px;
+    width: 160px;
+}
+
+.search-box input:focus{
+    outline: none;
+    border-color: #22c55e;
+}
+
+/* icons */
+
+.action-icon{
+    font-size: 16px;
+    color: #475569;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.action-icon:hover{
+    color: #22c55e;
+}
+
+/* responsive */
+
+@media (max-width: 991px){
+
+    .main-header{
+        margin-right: 0;
+    }
+
+    .search-box{
+        display:none;
+    }
+
+}
