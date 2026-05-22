@@ -18,7 +18,6 @@ require_once '../layout/Head/Head.php';
                     <!-- بدنه کارت -->
                     <div class="card-body p-4 p-xl-5">
                         <form action="chek_user" method="post">
-                            <!-- نام -->
                             <div class="mb-3">
                                 <label for="FirstName" class="form-label fw-bold" Multi_Lang="Label_Name">نام</label>
                                 <div class="input-group">
@@ -26,8 +25,6 @@ require_once '../layout/Head/Head.php';
                                     <span class="input-group-text rounded-3 border-0"><i class="fa-solid fa-user text-dark"></i></span>
                                 </div>
                             </div>
-
-                            <!-- نام خانوادگی -->
                             <div class="mb-3">
                                 <label for="LastName" class="form-label fw-bold Register-label" Multi_Lang="Label_LastName"></label>
                                 <div class="input-group">
@@ -35,8 +32,6 @@ require_once '../layout/Head/Head.php';
                                     <span class="input-group-text rounded-3 border-0"><i class="fa-solid fa-user text-dark"></i></span>
                                 </div>
                             </div>
-
-                            <!-- نقش کاربری -->
                             <div class="mb-3">
                                 <label for="role" class="form-label fw-bold" Multi_Lang="Label_Role" ></label>
                                 <div class="input-group">
@@ -49,8 +44,6 @@ require_once '../layout/Head/Head.php';
                                     <span class="input-group-text rounded-3 border-0"><i class="fa-solid fa-universal-access text-dark"></i></span>
                                 </div>
                             </div>
-
-                            <!-- ایمیل -->
                             <div class="mb-3">
                                 <label for="Email" class="form-label fw-bold" Multi_Lang="Label_Email">ایمیل</label>
                                 <div class="input-group">
@@ -58,8 +51,6 @@ require_once '../layout/Head/Head.php';
                                     <span class="input-group-text rounded-3 border-0"><i class="fa-solid fa-envelope text-dark"></i></span>
                                 </div>
                             </div>
-
-                            <!-- رمز عبور -->
                             <div class="mb-3">
                                 <label for="pass" class="form-label fw-bold" Multi_Lang="Label_Password">رمز عبور</label>
                                 <div class="input-group">
@@ -69,11 +60,17 @@ require_once '../layout/Head/Head.php';
         </span>
                                 </div>
                             </div>
+                            <div class="mt-4 text-center">
+                                <p class="text-muted">
+                                    <span Multi_Lang="Login_Prompt" style="background: whitesmoke"></span>
+                                    <a href="login" class="text-primary fw-bold" Multi_Lang="Login_Link">وارد شوید</a>
+                                </p>
+                            </div>
 
                             <button type="submit" name="login"
                                     class="btn w-100 py-2 fw-bold text-white border-0 rounded-3"
-                                    style="">
-                                ورود
+                                    Multi_Lang="Submit">
+
                             </button>
                         </form>
                     </div>
