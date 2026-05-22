@@ -287,6 +287,8 @@ body {
 .Register-Page span {
     background: #00ec9d;
 }
+.Register-Page .card-header {
+    background: linear-gradient(135deg, #00ec9d, #00b894);}
 
 .Register-Page button {
     background: linear-gradient(135deg, #00ec9d, #00b894);
@@ -297,6 +299,9 @@ body {
     border-radius: 2vh;
 }
 .Register-Page select {
+    direction: rtl;
+}
+.Register-label {
     direction: rtl;
 }
 
