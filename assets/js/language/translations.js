@@ -14,7 +14,12 @@ export const translations = {
         Label_LastName: "نام خانوادگی",
         Label_Role: "نقش کاربری",
         Label_Email: "ایمیل",
-        Label_Password: "رمز عبور"
+        Label_Password: "رمز عبور",
+        Login_Prompt: "آیا قبلاً حساب کاربری دارید؟ ",
+        login_Link: "وارد شوید",
+        register_Prompt: "آیا حساب ندارید؟",
+        register_Link: "ساخت حساب",
+        Submit: "ورود",
     },
     en: {
         title: "Hello",
@@ -32,6 +37,11 @@ export const translations = {
         Label_LastName: "Last Name",
         Label_Role: "Role",
         Label_Email: "Email",
-        Label_Password: "Password"
+        Login_Prompt: "Do you already have an account?",
+        Login_Link: "Sign in",
+        Label_Password: "Password",
+        register_Prompt: "Do you Not already have an account?",
+        register_Link: "Sing up",
+        Submit: "Submit",
     }
 };
