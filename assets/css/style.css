@@ -322,6 +322,96 @@ html {
     padding: 20px;
     flex: 1;
 }
+/* --- استایل بخش اکشن‌های هدر (پروفایل + زبان) --- */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* استایل دکمه‌های تغییر زبان */
+.lang-switch {
+    display: flex;
+    background: #f1f5f9; /* پس‌زمینه کمرنگ */
+    border-radius: 20px;
+    padding: 3px;
+    border: 1px solid #e2e8f0;
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    padding: 5px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #64748b;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+/* حالت فعال دکمه زبان */
+.lang-btn.active {
+    background-color: var(--primary-color); /* رنگ سبز #00ec9d */
+    color: #1e293b; /* رنگ متن تیره برای کنتراست بهتر */
+    box-shadow: 0 2px 5px rgba(0, 236, 157, 0.3);
+}
+
+.lang-btn:hover:not(.active) {
+    color: var(--primary-color);
+}
+
+/* استایل پروفایل کاربر در هدر */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: background 0.2s;
+}
+
+.user-profile:hover {
+    background-color: #f8fafc;
+}
+
+.user-name-header {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+.arrow-icon {
+    font-size: 0.7rem;
+    color: #94a3b8;
+    transition: transform 0.2s;
+}
+
+.user-profile:hover .arrow-icon {
+    color: var(--primary-color);
+}
+
+/* ریسپانسیو برای موبایل */
+@media (max-width: 768px) {
+    .search-box {
+        display: none; /* در موبایل سرچ رو مخفی کن تا جا باز بشه */
+    }
+
+    .user-name-header {
+        display: none; /* نام کاربر رو در موبایل مخفی کن */
+    }
+
+    .header-actions {
+        gap: 10px;
+    }
+
+    .lang-btn {
+        padding: 4px 8px;
+        font-size: 0.75rem;
+    }
+}
 
 .card {
     background: white;
@@ -419,6 +509,10 @@ html {
 .Register-Page .card {
     backdrop-filter: blur(20px);
     background: rgba(255, 255, 255, 0.15);
+
+}
+.Register-Page .card-header {
+    border-radius: 2vh
 
 }
 
