@@ -57,3 +57,41 @@
     // با تغییر سایز صفحه هماهنگ کن
     window.addEventListener("resize", syncByScreen);
 })();
+    document.addEventListener('DOMContentLoaded', function() {
+        const sidebar = document.getElementById('sidebar');
+        const openBtn = document.getElementById('openSidebarBtn');
+        const closeBtn = document.getElementById('closeSidebarBtn');
+        const overlay = document.createElement('div'); // ایجاد لایه تاریک
+
+        // اضافه کردن کلاس overlay به بدنه
+        overlay.classList.add('overlay');
+        document.body.appendChild(overlay);
+
+        // تابع باز کردن منو
+        function openMenu() {
+            sidebar.classList.add('active');
+            overlay.classList.add('active');
+        }
+
+        // تابع بستن منو
+        function closeMenu() {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        }
+
+        // رویداد کلیک روی دکمه باز کردن (در هدر)
+        openBtn.addEventListener('click', openMenu);
+
+        // رویداد کلیک روی دکمه بستن (داخل منو)
+        closeBtn.addEventListener('click', closeMenu);
+
+        // رویداد کلیک روی لایه تاریک (برای بستن منو)
+        overlay.addEventListener('click', closeMenu);
+
+        // بستن منو با کلید Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && sidebar.classList.contains('active')) {
+                closeMenu();
+            }
+        });
+    });
