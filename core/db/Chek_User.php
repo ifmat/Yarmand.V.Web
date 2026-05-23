@@ -5,8 +5,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     require_once '../layout/session/session.php';
 
     if ($conn) {
-        $FirstName = $_POST['firstname'] ?? '';
-        $LastName  = $_POST['lastname'] ?? '';
+        $FirstName = $_POST['FirstName'] ?? '';
+        $LastName  = $_POST['LastName'] ?? '';
         $Role      = (int)($_POST['role'] ?? 1);
         $Email     = $_POST['Email'] ?? '';
         $Password  = $_POST['pass'] ?? '';
