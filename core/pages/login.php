@@ -7,22 +7,22 @@ require_once '../layout/Head/Head.php';
         <div class="row justify-content-center ">
             <div class="col-11 col-sm-8 col-md-7 col-lg-7 col-xl-6">
                 <div class="card border-0 shadow-lg rounded-4 overflow-hidden Register-main">
-                    <div class="card-header text-center py-4 border-0"
+                    <div class="card-header text-center py-4 border-0 rounded rounded-3"
                          style="">
                         <i class="ti-lock display-5 text-white"></i>
-                        <h2 class="text-white mt-2 mb-0 fw-bold" Multi_Lang="Welcome_login"></h2>
+                        <h2 class="text-white mt-2 mb-0 fw-bold " Multi_Lang="Welcome_login"></h2>
                     </div>
                     <div class="card-body p-4 p-xl-5">
                         <form action="chek_user_login" method="post">
                             <div class="mb-3">
-                                <label for="Email" class="form-label fw-bold" Multi_Lang="Label_Email">ایمیل</label>
+                                <label for="Email" class="form-label fw-bold" Multi_Lang="Label_Email"></label>
                                 <div class="input-group">
                                     <input name="Email" id="Email" type="email" class="form-control form-control-lg rounded-3 text-dark" required>
                                     <span class="input-group-text rounded-3 border-0"><i class="fa-solid fa-envelope text-dark"></i></span>
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label for="pass" class="form-label fw-bold" Multi_Lang="Label_Password">رمز عبور</label>
+                                <label for="pass" class="form-label fw-bold" Multi_Lang="Label_Password"></label>
                                 <div class="input-group">
                                     <input id="pass" name="pass" type="password" class="form-control form-control-lg rounded-3" required>
                                     <span class="input-group-text toggle-password rounded-3 border-0">
@@ -32,8 +32,8 @@ require_once '../layout/Head/Head.php';
                             </div>
                             <div class="mt-4 text-center">
                                 <p class="text-muted">
-                                    <span Multi_Lang="register_Prompt" style="background: whitesmoke">آیا حساب کاربری نداری؟؟</span>
-                                    <a href="register.php" class="text-primary fw-bold" Multi_Lang="register_Link">ساخت حساب جدید</a>
+                                    <span Multi_Lang="register_Prompt" style="background: whitesmoke"></span>
+                                    <a href="register.php" class="text-primary fw-bold" Multi_Lang="register_Link"></a>
                                 </p>
                             </div>
                             <button type="submit" name="login"
