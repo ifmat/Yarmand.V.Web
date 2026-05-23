@@ -7,8 +7,8 @@ require_once '../layout/Head/Head.php';
         <div class="row justify-content-center ">
             <div class="col-11 col-sm-8 col-md-7 col-lg-7 col-xl-6">
                 <div class="card border-0 shadow-lg rounded-4 overflow-hidden Register-main">
-                    <div class="card-header text-center py-4 border-0 rounded rounded-3"
-                         style="">
+                    <div class="card-header text-center py-4 border-0 "
+                         >
                         <i class="ti-lock display-5 text-white"></i>
                         <h2 class="text-white mt-2 mb-0 fw-bold " Multi_Lang="Welcome_login"></h2>
                     </div>

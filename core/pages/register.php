@@ -10,7 +10,7 @@ require_once '../layout/Head/Head.php';
                 <!-- کارت ثبت نام / ورود -->
                 <div class="card border-0 shadow-lg rounded-4 overflow-hidden Register-main">
                     <!-- هدر کارت -->
-                    <div class="card-header text-center py-4 border-0 rounded rounded-3"
+                    <div class="card-header text-center py-4 border-0 "
                          style="">
                         <i class="ti-lock display-5 text-white"></i>
                         <h2 class="text-white mt-2 mb-0 fw-bold" Multi_Lang="Welcome_login"></h2>
