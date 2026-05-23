@@ -37,9 +37,9 @@ require_once '../layout/Head/Head.php';
                                 <div class="input-group">
                                     <select name="role" id="role" class="form-control form-control-lg rounded-3 text-dark">
                                         <option value="" disabled selected Multi_Lang="Role_Choise"></option>
-                                        <option value="1" Multi_Lang="Role_salmand"></option>
-                                        <option value="2" Multi_Lang="Role_do"></option>
-                                        <option value="3" Multi_Lang="Role_shop"></option>
+                                        <option value="3" Multi_Lang="Role_salmand"></option>
+                                        <option value="4" Multi_Lang="Role_do"></option>
+                                        <option value="5" Multi_Lang="Role_shop"></option>
                                     </select>
                                     <span class="input-group-text rounded-3 border-0"><i class="fa-solid fa-universal-access text-dark"></i></span>
                                 </div>
