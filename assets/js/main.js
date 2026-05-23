@@ -95,3 +95,25 @@
             }
         });
     });
+    // مدیریت تغییر زبان
+    const langBtns = document.querySelectorAll('.lang-btn');
+
+    langBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // اول کلاس active رو از همه دکمه‌ها بردار
+            langBtns.forEach(b => b.classList.remove('active'));
+
+            // بعد کلاس active رو به دکمه‌ای که کلیک شده اضافه کن
+            this.classList.add('active');
+
+            // اینجا می‌تونی منطق تغییر زبان رو هم اضافه کنی
+            // مثلا:
+            // if (this.id === 'btn-fa') {
+            //     document.documentElement.lang = 'fa';
+            //     document.documentElement.dir = 'rtl';
+            // } else {
+            //     document.documentElement.lang = 'en';
+            //     document.documentElement.dir = 'ltr';
+            // }
+        });
+    });
