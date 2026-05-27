@@ -31,6 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($stmt->execute()) {
             header('Location: P_U'); // مسیر صفحه موفقیت
             $_SESSION['level']=$Role;
+            $_SESSION['name']=$FirstName;
         } else {
             header('Location: error_500');
         }
