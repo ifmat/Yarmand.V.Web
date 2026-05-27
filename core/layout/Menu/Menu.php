@@ -6,7 +6,8 @@ switch ($_SESSION['level']) {
     //admin (مدیر سیستم)
     case '0':
         echo '
-<aside class="sidebar" id="sidebar">
+<div class="col-sm-2 col-lg-2 col-xl-2">
+<aside class="sidebar col-md-3 col-lg-2 sidebar" id="sidebar">
     <div class="sidebar-header">
         
         <button class="close-sidebar-btn" id="closeSidebarBtn">
@@ -47,13 +48,15 @@ switch ($_SESSION['level']) {
         <li><a href="Logout" class="logout"><i class="fas fa-sign-out-alt"></i> <span Multi_lang="menu_logout"></span></a></li>
     </ul>
 </aside>
+</div>
 ';
         break;
 
     //doer (انجام دهنده)
     case '1':
         echo '
-<aside class="sidebar" id="sidebar">
+<div class="col-sm-2 col-lg-2 col-xl-2">
+<aside class="sidebar col-md-3 col-lg-2 sidebar" id="sidebar">
     <div class="sidebar-header">
         
         <button class="close-sidebar-btn" id="closeSidebarBtn">
@@ -85,13 +88,15 @@ switch ($_SESSION['level']) {
         <li><a href="Logout" class="logout"><i class="fas fa-sign-out-alt"></i> <span Multi_lang="menu_logout"></span></a></li>
     </ul>
 </aside>
+</div>
 ';
         break;
 
     //elderly (سالمند)
     case '2':
         echo '
-<aside class="sidebar" id="sidebar">
+<div class="col-sm-2 col-lg-2 col-xl-2">
+<aside class="sidebar col-md-3 col-lg-2 sidebar" id="sidebar">
     <div class="sidebar-header">
         
         <button class="close-sidebar-btn" id="closeSidebarBtn">
@@ -124,13 +129,15 @@ switch ($_SESSION['level']) {
         <li><a href="Logout" class="logout"><i class="fas fa-sign-out-alt"></i> <span Multi_lang="menu_logout"></span></a></li>
     </ul>
 </aside>
+</div>
 ';
         break;
 
     //shop (فروشگاه)
     case '3':
         echo '
-<aside class="sidebar" id="sidebar">
+<div class="col-sm-2 col-lg-2 col-xl-2">
+<aside class=" sidebar" id="sidebar">
     <div class="sidebar-header">
         
         <button class="close-sidebar-btn" id="closeSidebarBtn">
@@ -162,13 +169,16 @@ switch ($_SESSION['level']) {
         <li><a href="Logout" class="logout"><i class="fas fa-sign-out-alt"></i> <span Multi_lang="menu_logout"></span></a></li>
     </ul>
 </aside>
+
+</div>
 ';
         break;
 
     //support (پشتیبان تلفنی)
     case '4':
         echo '
-<aside class="sidebar" id="sidebar">
+<div class="col-sm-2 col-lg-2 col-xl-2">
+<aside class="sidebar col-md-3 col-lg-2 sidebar" id="sidebar">
     <div class="sidebar-header">
         <button class="close-sidebar-btn" id="closeSidebarBtn">
             <i class="fas fa-times"></i>
@@ -201,13 +211,15 @@ switch ($_SESSION['level']) {
         <li><a href="Logout" class="logout"><i class="fas fa-sign-out-alt"></i> <span Multi_lang="menu_logout"></span></a></li>
     </ul>
 </aside>
+</div>
 ';
         break;
 
     //default (سایر کاربران / صفحات عمومی)
     default:
         echo '
-<aside class="sidebar" id="sidebar">
+<div class="col-sm-2 col-lg-2 col-xl-2">
+<aside class="sidebar col-md-3 col-lg-2 sidebar" id="sidebar">
     <div class="sidebar-header">
         
         <button class="close-sidebar-btn" id="closeSidebarBtn">
@@ -243,6 +255,7 @@ switch ($_SESSION['level']) {
         <li><a href="login"><i class="fas fa-sign-in-alt"></i> <span Multi_lang="menu_login"></span></a></li>
     </ul>
 </aside>
+</div>
 ';
         break;
 }

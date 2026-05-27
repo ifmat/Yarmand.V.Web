@@ -13,122 +13,154 @@ if (in_array($_SESSION['level'], $denied)) {
 }
 ?>
     <body>
-    <?php
-    require_once '../layout/Header/Header.php';
-    require_once '../layout/Menu/Menu.php';
-    ?>
-    <main class="main-content">
-        <div class="container-fluid">
-            <div class="card">
-                <div class="wrapper">
-                    <div id="loader"></div>
-                    <div class="content-wrapper">
-                        <div class="container-fluid p-4 ">
-                            <section class="content">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="card shadow-sm border-0">
-                                            <div class="card-header bg-dark text-white">
-                                                <h4 class="card-title mb-0" Multi_Lang="register_new_student">ثبت هنرجو جدید</h4>
-                                            </div>
-                                            <div class="card-body">
-                                                <form enctype="multipart/form-data" action="add_stdu" method="post" id="frmFileUpload">
-                                                    <div class="row g-4">
-                                                        <!-- بخش اطلاعات دانش‌آموز -->
-                                                        <div class="col-12">
-                                                            <div class="card border">
-                                                                <div class="card-header bg-secondary text-white">
-                                                                    <h5 class="mb-0" Multi_Lang="student_info">اطلاعات دانش‌آموز</h5>
-                                                                </div>
-                                                                <div class="card-body">
-                                                                    <div class="row g-3">
-                                                                        <div class="col-md-4">
-                                                                            <label class="fw-bold" Multi_Lang="name">نام</label>
-                                                                            <input required type="text" name="name_stdu" class="form-control" placeholder="نام">
-                                                                        </div>
-                                                                        <div class="col-md-4">
-                                                                            <label class="fw-bold" Multi_Lang="family">نام خانوادگی</label>
-                                                                            <label>
-                                                                                <input required type="text" name="lname_stdu" class="form-control" placeholder="فامیلی">
-                                                                            </label>
-                                                                        </div>
-                                                                        <div class="col-md-4">
-                                                                            <label class="fw-bold" Multi_Lang="phone">شماره تلفن</label>
-                                                                            <input required type="text" name="number_phone_stdu" class="form-control" placeholder="تلفن">
-                                                                        </div>
-                                                                        <div class="col-md-3">
-                                                                            <label class="fw-bold" Multi_Lang="birthday">تاریخ تولد</label>
-                                                                            <input data-jdp required type="text" name="birthday_stdu" class="form-control" placeholder="تاریخ تولد">
-                                                                        </div>
-                                                                        <div class="col-md-3">
-                                                                            <label class="fw-bold" Multi_Lang="national_code">کد ملی</label>
-                                                                            <input required type="number" name="cod_meli_stdu" class="form-control" placeholder="کدملی">
-                                                                        </div>
-                                                                        <div class="col-12">
-                                                                            <label class="fw-bold" Multi_Lang="address">آدرس منزل</label>
-                                                                            <textarea name="address_stdu" rows="2" class="form-control" placeholder="آدرس خانه"></textarea>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+            <?php
+            require_once '../layout/Header/Header.php';
+            ?>
+            <div class="row">
 
-                                                        <!-- بخش اطلاعات والدین -->
-                                                        <div class="col-md-6">
-                                                            <div class="card border">
-                                                                <div class="card-header bg-secondary text-white">
-                                                                    <h6 class="mb-0" Multi_Lang="father_info">اطلاعات پدر</h6>
-                                                                </div>
-                                                                <div class="card-body p-3">
-                                                                    <div class="row g-2">
-                                                                        <div class="col-sm-6"><input type="text" name="father_name" class="form-control" placeholder="نام پدر"></div>
-                                                                        <div class="col-sm-6"><input type="text" name="father_phone" class="form-control" placeholder="شماره پدر"></div>
-                                                                        <div class="col-sm-6"><input type="text" name="father_education" class="form-control" placeholder="تحصیلات"></div>
-                                                                        <div class="col-sm-6"><input type="text" name="father_job" class="form-control" placeholder="شغل"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="card border">
-                                                                <div class="card-header bg-secondary text-white">
-                                                                    <h6 class="mb-0" Multi_Lang="mother_info">اطلاعات مادر</h6>
-                                                                </div>
-                                                                <div class="card-body p-3">
-                                                                    <div class="row g-2">
-                                                                        <div class="col-sm-6"><input type="text" name="mother_name" class="form-control" placeholder="نام مادر"></div>
-                                                                        <div class="col-sm-6"><input type="text" name="mother_phone" class="form-control" placeholder="شماره مادر"></div>
-                                                                        <div class="col-sm-6"><input type="text" name="mother_education" class="form-control" placeholder="تحصیلات"></div>
-                                                                        <div class="col-sm-6"><input type="text" name="mother_job" class="form-control" placeholder="شغل"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+            <?php
+            require_once '../layout/Menu/Menu.php';
+            ?>
+            <div class="container col-md-12 col-sm-10 col-xl-10 col-lg-9">
+            <div class=" main-content">
+                <div class="main-content bg-light min-vh-100 p-4">
+                    <div class="container-fluid">
 
-                                                        <div class="col-12 text-center mt-3">
-                                                            <button type="submit" class="btn btn-success btn-lg px-5">
-                                                                <i class="ti-save-alt"></i> <span Multi_Lang="submit_btn">ثبت هنرجو</span>
-                                                            </button>
-                                                        </div>
+                        <!-- هدر صفحه -->
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <div>
+                                <h2 class="fw-bold text-dark mb-1">
+                                    <i class="fas fa-plus-circle text-success me-2"></i>
+                                    ثبت محصول جدید
+                                </h2>
+
+                            </div>
+                        </div>
+
+                        <form enctype="multipart/form-data" action="add_product" method="post">
+                            <div class="row g-4">
+
+                                <!-- ستون سمت راست: اطلاعات اصلی (عرض بیشتر) -->
+                                <div class="col-lg-8">
+                                    <div class="card custom-card h-100 shadow-sm">
+                                        <div class="card-header custom-card-header d-flex justify-content-between align-items-center">
+                                            <span><i class="fas fa-box-open me-2"></i> اطلاعات پایه محصول</span>
+                                        </div>
+                                        <div class="card-body p-4">
+                                            <div class="row g-3">
+                                                <div class="col-md-6">
+                                                    <label class="form-label fw-bold text-secondary small">نام
+                                                        محصول</label>
+                                                    <input type="text" name="product_name"
+                                                           class="form-control form-control-lg"
+                                                           placeholder="مثلاً: کفش ورزشی" required>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="form-label fw-bold text-secondary small">دسته‌بندی</label>
+                                                    <select name="category_id" class="form-select form-select-lg"
+                                                            required>
+                                                        <option value="" selected disabled>انتخاب کنید...</option>
+                                                        <option value="1">پوشاک</option>
+                                                        <option value="2">الکترونیک</option>
+                                                        <option value="3">لوازم خانگی</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="form-label fw-bold text-secondary small">قیمت
+                                                        (تومان)</label>
+                                                    <div class="input-group">
+                                                        <input type="number" name="price"
+                                                               class="form-control form-control-lg" placeholder="0"
+                                                               required>
+                                                        <span class="input-group-text bg-light">تومان</span>
                                                     </div>
-                                                </form>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="form-label fw-bold text-secondary small">تعداد
+                                                        موجودی</label>
+                                                    <input type="number" name="stock"
+                                                           class="form-control form-control-lg" placeholder="0"
+                                                           required>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="form-label fw-bold text-secondary small">توضیحات
+                                                        کوتاه</label>
+                                                    <textarea name="short_desc" class="form-control" rows="3"
+                                                              placeholder="یک توضیح مختصر..."></textarea>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="form-label fw-bold text-secondary small">توضیحات
+                                                        کامل</label>
+                                                    <textarea name="full_desc" class="form-control" rows="5"
+                                                              placeholder="جزئیات کامل محصول..."></textarea>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </section>
-                        </div>
+
+                                <!-- ستون سمت چپ: تصویر و ویژگی‌ها (عرض کمتر) -->
+                                <div class="col-lg-4">
+                                    <!-- کارت آپلود تصویر -->
+                                    <div class="card custom-card mb-4 shadow-sm">
+                                        <div class="card-header custom-card-header">
+                                            <i class="fas fa-image me-2"></i> تصویر محصول
+                                        </div>
+                                        <div class="card-body text-center p-4">
+                                            <div class="mb-3">
+                                                <img src="assets/images/placeholder.png" id="previewImage"
+                                                     class="img-fluid rounded border bg-light"
+                                                     style="max-height: 180px; object-fit: cover;">
+                                            </div>
+                                            <label class="btn btn-outline-primary w-100 btn-lg">
+                                                <i class="fas fa-cloud-upload-alt me-2"></i> انتخاب تصویر
+                                                <input type="file" name="product_image" class="d-none" accept="image/*"
+                                                       onchange="previewImg(this)">
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- کارت ویژگی‌ها -->
+                                    <div class="card custom-card shadow-sm">
+                                        <div class="card-header custom-card-header">
+                                            <i class="fas fa-tags me-2"></i> ویژگی‌ها
+                                        </div>
+                                        <div class="card-body p-4">
+                                            <div class="mb-3">
+                                                <label class="form-label fw-bold text-secondary small">برند</label>
+                                                <input type="text" name="brand" class="form-control"
+                                                       placeholder="نام برند">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label fw-bold text-secondary small">وضعیت</label>
+                                                <select name="status" class="form-select">
+                                                    <option value="active">فعال</option>
+                                                    <option value="inactive">غیرفعال</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- دکمه ثبت -->
+                            <div class="row mt-4">
+                                <div class="col-12 text-end">
+                                    <button type="submit" class="btn btn-custom-primary btn-lg px-5 shadow-sm">
+                                        <i class="fas fa-save me-2"></i> ثبت محصول
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-
             </div>
-            <!-- محتوای بیشتر اینجا قرار می‌گیرد -->
-        </div>
-    </main>
 
-    <?php
-    require_once '../layout/Js/Js.php';
-    ?>
+            <?php
+            require_once '../layout/Js/Js.php';
+            ?>
+        </div>
+    </div>
     </body>
 <?php
 require_once '../layout/Html/EndHtml.php';
