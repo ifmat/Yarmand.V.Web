@@ -8,10 +8,7 @@ switch ($_SESSION['level']) {
         echo '
 <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
-        <div class="logo">
-            <i class="fas fa-cube"></i>
-            <span>پنل ادمین</span>
-        </div>
+        
         <button class="close-sidebar-btn" id="closeSidebarBtn">
             <i class="fas fa-times"></i>
         </button>
@@ -23,7 +20,7 @@ switch ($_SESSION['level']) {
             <span class="status-dot"></span>
         </div>
         <div class="user-info">
-            <h4 class="user-name">ماتین</h4>
+            <h4 class="user-name">"'. $_SESSION['name'] .'"</h4>
             <p class="user-role" Multi_lang="admin_role"></p>
         </div>
     </div>
@@ -58,10 +55,7 @@ switch ($_SESSION['level']) {
         echo '
 <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
-        <div class="logo">
-            <i class="fas fa-cube"></i>
-            <span>پنل ادمین</span>
-        </div>
+        
         <button class="close-sidebar-btn" id="closeSidebarBtn">
             <i class="fas fa-times"></i>
         </button>
@@ -73,7 +67,7 @@ switch ($_SESSION['level']) {
             <span class="status-dot"></span>
         </div>
         <div class="user-info">
-            <h4 class="user-name">ماتین</h4>
+            <h4 class="user-name">'. $_SESSION['name'] .'</h4>
             <p class="user-role" Multi_lang="doer_role"></p>
         </div>
     </div>
@@ -99,10 +93,7 @@ switch ($_SESSION['level']) {
         echo '
 <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
-        <div class="logo">
-            <i class="fas fa-cube"></i>
-            <span>پنل ادمین</span>
-        </div>
+        
         <button class="close-sidebar-btn" id="closeSidebarBtn">
             <i class="fas fa-times"></i>
         </button>
@@ -114,7 +105,7 @@ switch ($_SESSION['level']) {
             <span class="status-dot"></span>
         </div>
         <div class="user-info">
-            <h4 class="user-name">ماتین</h4>
+            <h4 class="user-name">'. $_SESSION['name'] .'</h4>
             <p class="user-role" Multi_lang="elderly_role"></p>
         </div>
     </div>
@@ -141,10 +132,7 @@ switch ($_SESSION['level']) {
         echo '
 <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
-        <div class="logo">
-            <i class="fas fa-cube"></i>
-            <span>پنل ادمین</span>
-        </div>
+        
         <button class="close-sidebar-btn" id="closeSidebarBtn">
             <i class="fas fa-times"></i>
         </button>
@@ -156,7 +144,7 @@ switch ($_SESSION['level']) {
             <span class="status-dot"></span>
         </div>
         <div class="user-info">
-            <h4 class="user-name">ماتین</h4>
+            <h4 class="user-name">'. $_SESSION['name'] .'</h4>
             <p class="user-role" Multi_lang="shop_role"></p>
         </div>
     </div>
@@ -182,10 +170,6 @@ switch ($_SESSION['level']) {
         echo '
 <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
-        <div class="logo">
-            <i class="fas fa-cube"></i>
-            <span>پنل ادمین</span>
-        </div>
         <button class="close-sidebar-btn" id="closeSidebarBtn">
             <i class="fas fa-times"></i>
         </button>
@@ -197,7 +181,7 @@ switch ($_SESSION['level']) {
             <span class="status-dot"></span>
         </div>
         <div class="user-info">
-            <h4 class="user-name">ماتین</h4>
+            <h4 class="user-name">'. $_SESSION['name'] .'</h4>
             <p class="user-role" Multi_lang="support_role"></p>
         </div>
     </div>
@@ -225,10 +209,7 @@ switch ($_SESSION['level']) {
         echo '
 <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
-        <div class="logo">
-            <i class="fas fa-cube"></i>
-            <span>پنل ادمین</span>
-        </div>
+        
         <button class="close-sidebar-btn" id="closeSidebarBtn">
             <i class="fas fa-times"></i>
         </button>
@@ -240,7 +221,7 @@ switch ($_SESSION['level']) {
             <span class="status-dot"></span>
         </div>
         <div class="user-info">
-            <h4 class="user-name">ماتین</h4>
+            <h4 class="user-name">'. $_SESSION['name'] .'</h4>
             <p class="user-role" Multi_lang="guest_role"></p>
         </div>
     </div>
