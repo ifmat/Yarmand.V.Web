@@ -8,7 +8,8 @@
     btn = document.createElement("button");
     btn.id = "sidebarToggleBtn";
     btn.type = "button";
-    btn.innerHTML = '<i class="fa-solid fa-ellipsis-vertical"></i>';
+    // btn.hidden(btn);
+    btn.innerHTML = '<i class=" "></i>';
     document.body.appendChild(btn);
 }
 
