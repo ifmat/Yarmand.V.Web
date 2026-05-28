@@ -21,6 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($Password == $row["Password_User"]) {
                  $_SESSION['user_id'] = $row['Id_user'];
                  $_SESSION['level'] = $row['Role_User'];
+                 $_SESSION['name'] = $row['Lastname_User'];
 
                 header('Location: P_U'); // مسیر صفحه موفقیت
                 mysqli_free_result($stmt); // آزاد کردن حافظه نتیجه کوئری
