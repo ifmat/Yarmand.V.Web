@@ -53,7 +53,7 @@ switch ($_SESSION['level']) {
         break;
 
     //doer (انجام دهنده)
-    case '1':
+    case '4':
         echo '
 <div class="col-sm-2 col-lg-2 col-xl-2">
 <aside class="sidebar col-md-3 col-lg-2 sidebar" id="sidebar">
@@ -93,7 +93,7 @@ switch ($_SESSION['level']) {
         break;
 
     //elderly (سالمند)
-    case '2':
+    case '3':
         echo '
 <div class="col-sm-2 col-lg-2 col-xl-2">
 <aside class="sidebar col-md-3 col-lg-2 sidebar" id="sidebar">
@@ -134,7 +134,7 @@ switch ($_SESSION['level']) {
         break;
 
     //shop (فروشگاه)
-    case '3':
+    case '5':
         echo '
 <div class="col-sm-2 col-lg-2 col-xl-2">
 <aside class=" sidebar" id="sidebar">
