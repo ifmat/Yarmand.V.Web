@@ -2,10 +2,10 @@
 require_once '../layout/session/session.php';
 require_once '../layout/Html/StartHtml.php';
 require_once '../layout/Head/Head.php';
-$denied = [ 2,6];
+$denied = [2, 6];
 if (in_array($_SESSION['level'], $denied)) {
     header("Location: error_404");
-    if($_SESSION['level']==6){
+    if ($_SESSION['level'] == 6) {
         header("Location: error_maintenance");
 
     }
@@ -20,23 +20,25 @@ if (in_array($_SESSION['level'], $denied)) {
     <div class="wrapper">
         <div id="loader"></div>
         <?php
-        if ($_SESSION['level'] == 1) {
-            require_once '../layout/P/Admin.php';
+        if ($_SESSION['level'] == 0) {
+            require_once '../layout/P/Super_Admin.php';
         } else {
-            if ($_SESSION['level'] == 5) {
+            if ($_SESSION['level'] == 1) {
                 require_once '../layout/P/Admin.php';
             } else {
-                if ($_SESSION['level'] == 6) {
-                    require_once '../layout/P/Admin.php';
-
+                if ($_SESSION['level'] == 3) {
+                    require_once '../layout/P/Yarjo.php';
                 } else {
-                    if ($_SESSION['level'] == 7) {
-                        require_once '../layout/P/Admin.php';
-
+                    if ($_SESSION['level'] == 4) {
+                        require_once '../layout/P/Yavar.php';
                     } else {
-                        if ($_SESSION['level'] == 4) {
-                            require_once '../layout/P/Admin.php';
+                        if ($_SESSION['level'] == 5) {
+                            require_once '../layout/P/Camp_Yarjo.php';
+                        } else {
+                            if ($_SESSION['level'] == 6) {
+                                header("Location: error_404");
 
+                            }
                         }
                     }
                 }

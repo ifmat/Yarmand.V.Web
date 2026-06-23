@@ -13,15 +13,15 @@ if (in_array($_SESSION['level'], $denied)) {
 }
 ?>
     <body>
-    <?php
-    require_once '../layout/Header/Header.php';
-    ?>
-    <div class="row">
+            <?php
+            require_once '../layout/Header/Header.php';
+            ?>
+            <div class="row">
 
-        <?php
-        require_once '../layout/Menu/Menu.php';
-        ?>
-        <div class="container col-md-12 col-sm-10 col-xl-10 col-lg-9">
+            <?php
+            require_once '../layout/Menu/Menu.php';
+            ?>
+            <div class="container col-md-12 col-sm-10 col-xl-10 col-lg-9">
             <div class=" main-content">
                 <div class="main-content bg-light min-vh-100 p-4">
                     <div class="container-fluid">
@@ -37,7 +37,7 @@ if (in_array($_SESSION['level'], $denied)) {
                             </div>
                         </div>
 
-                        <form enctype="multipart/form-data" action="add_product" method="post">
+                        <form enctype="multipart/form-data" action="Chek_Register_product" method="post">
                             <div class="row g-4">
 
                                 <!-- ستون سمت راست: اطلاعات اصلی (عرض بیشتر) -->
@@ -99,7 +99,7 @@ if (in_array($_SESSION['level'], $denied)) {
                                     </div>
                                 </div>
 
-                                <!-- ستون سمت چپ: تصویر و ویژگی‌ها (عرض کمتر) -->
+                                <!-- ستون سمت چپ: تصویر و ویژگی‌ها  -->
                                 <div class="col-lg-4">
                                     <!-- کارت آپلود تصویر -->
                                     <div class="card custom-card mb-4 shadow-sm">
@@ -117,6 +117,15 @@ if (in_array($_SESSION['level'], $denied)) {
                                                 <input type="file" name="product_image" class="d-none" accept="image/*"
                                                        onchange="previewImg(this)">
                                             </label>
+
+                                            <label class="form-label fw-bold text-black mt-2 text-end ">عکس پیش فرض</label>
+                                            <select name="Image_Id" class="form-select form-select-lg"
+                                                    required>
+                                                <option value="" selected disabled>انتخاب کنید...</option>
+                                                <option value="1">پوشاک</option>
+                                                <option value="2">الکترونیک</option>
+                                                <option value="3">لوازم خانگی</option>
+                                            </select>
                                         </div>
                                     </div>
 
@@ -134,8 +143,8 @@ if (in_array($_SESSION['level'], $denied)) {
                                             <div class="mb-3">
                                                 <label class="form-label fw-bold text-secondary small">وضعیت</label>
                                                 <select name="status" class="form-select">
-                                                    <option value="active">فعال</option>
-                                                    <option value="inactive">غیرفعال</option>
+                                                    <option value="1">فعال</option>
+                                                    <option value="0">غیرفعال</option>
                                                 </select>
                                             </div>
                                         </div>

@@ -17,7 +17,7 @@ require_once '../layout/Head/Head.php';
                     </div>
                     <!-- بدنه کارت -->
                     <div class="card-body p-4 p-xl-5">
-                        <form action="chek_user" method="post">
+                        <form action="Chek_User_Register" method="post">
                             <div class="mb-3">
                                 <label for="FirstName" class="form-label fw-bold" Multi_Lang="Label_Name">نام</label>
                                 <div class="input-group">

@@ -17,10 +17,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($stmt && mysqli_num_rows($stmt) > 0) {
             $row = mysqli_fetch_assoc($stmt);
-
             if ($Password == $row["Password_User"]) {
                  $_SESSION['user_id'] = $row['Id_user'];
                  $_SESSION['level'] = $row['Role_User'];
+                 $_SESSION['name'] = $row['Lastname_User'];
 
                 header('Location: P_U'); // مسیر صفحه موفقیت
                 mysqli_free_result($stmt); // آزاد کردن حافظه نتیجه کوئری
@@ -45,5 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header('Location: error_404'); // خطای اتصال به دیتابیس
         exit;
     }
+}else{
+    echo "asdassad";
 }
 ?>

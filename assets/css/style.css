@@ -517,3 +517,105 @@ html {
 }
 
 /* Close Register */
+
+
+/* متغیرهای رنگی برای استفاده راحت‌تر */
+:root {
+    --primary-dark: #334155;
+    --accent-green: #00ec9d;
+    --accent-green-hover: #00c985;
+    --bg-light: #f8f9fa;
+}
+
+/* استایل کلی کارت‌ها */
+.custom-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    background: #fff;
+    overflow: hidden;
+}
+
+/* هدر کارت‌ها با رنگ تم */
+.custom-card-header {
+    background-color: var(--primary-dark);
+    color: #fff;
+    padding: 15px 20px;
+    font-weight: 600;
+    border-bottom: 3px solid var(--accent-green);
+}
+
+/* استایل اینپوت‌ها */
+.form-control:focus {
+    border-color: var(--accent-green);
+    box-shadow: 0 0 0 0.25rem rgba(0, 236, 157, 0.25);
+}
+
+/* دکمه اصلی با رنگ تم */
+.btn-custom-primary {
+    background-color: var(--accent-green);
+    color: var(--primary-dark);
+    font-weight: 700;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-custom-primary:hover {
+    background-color: var(--accent-green-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 236, 157, 0.4);
+    color: #fff;
+}
+
+/* استایل جدول */
+.custom-table thead th {
+    background-color: var(--primary-dark);
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    padding: 15px;
+}
+
+.custom-table tbody td {
+    vertical-align: middle;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.custom-table tbody tr:hover {
+    background-color: #f1f9f6; /* رنگ خیلی ملایم سبز */
+}
+
+/* دکمه‌های کوچک در جدول */
+.btn-action {
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 2px;
+    transition: all 0.2s;
+}
+
+.btn-action:hover {
+    transform: scale(1.1);
+}
+
+/* استایل برای فایل آپلود */
+.file-upload-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.file-upload-wrapper input[type=file] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
