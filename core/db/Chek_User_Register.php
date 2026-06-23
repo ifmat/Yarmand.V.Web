@@ -10,25 +10,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $Role      = (int)($_POST['role'] ?? 1);
         $Email     = $_POST['Email'] ?? '';
         $Password  = $_POST['pass'] ?? '';
+        $Phone  = $_POST['Phone'] ?? 110;
         $Status    = 1;
 
         $Access = $Role;
-        $stmt = $conn->prepare("INSERT INTO `users`
-    (`FirstName_User`,
-     `Lastname_User`,
-     `Role_User`,
-     `AccessLevel_User`,
-     `Email_User`,
-     `Password_User`,
-     `Status_User`) VALUES (?, ?, ?, ?, ?, ?, ?)");
+        $stmt = mysqli_query($conn, "INSERT INTO `users`(
+                     `FirstName_User`, `Lastname_User`,
+                    `Role_User`, `AccessLevel_User`, `Email_User`, 
+                    `Password_User`, `PhoneNumber_User`, `Status_User`)
+                    VALUES (
+                            '$FirstName', '$LastName', '$Role',
+                            '$Access', '$Email', '$Password', '$Phone', '$Status')");
 
-        $stmt->bind_param(
-            "ssssssi",
-            $FirstName, $LastName, $Role, $Access, $Email,
-            $Password, $Status
-        );
 
-        if ($stmt->execute()) {
+        if ($stmt) {
             header('Location: P_U'); // مسیر صفحه موفقیت
             $_SESSION['level']=$Role;
             $_SESSION['name']=$FirstName;

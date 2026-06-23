@@ -1,6 +1,4 @@
-<?php
-//require_once '../session/session.php';
-?>
+
 <?php
 switch ($_SESSION['level']) {
     //admin (مدیر سیستم)
@@ -175,45 +173,45 @@ switch ($_SESSION['level']) {
         break;
 
     //support (پشتیبان تلفنی)
-    case '4':
-        echo '
-<div class="col-sm-2 col-lg-2 col-xl-2">
-<aside class="sidebar col-md-3 col-lg-2 sidebar" id="sidebar">
-    <div class="sidebar-header">
-        <button class="close-sidebar-btn" id="closeSidebarBtn">
-            <i class="fas fa-times"></i>
-        </button>
-    </div>
-
-    <div class="user-profile-card">
-        <div class="avatar-container">
-            <img src="assets/images/avatar.png" alt="User Avatar" class="user-avatar">
-            <span class="status-dot"></span>
-        </div>
-        <div class="user-info">
-            <h4 class="user-name">'. $_SESSION['name'] .'</h4>
-            <p class="user-role" Multi_lang="support_role"></p>
-        </div>
-    </div>
-
-    <ul class="sidebar-menu">
-        <li class="menu-title" Multi_lang="main_menu"></li>
-        <li><a href="dashboard" class="active"><i class="fas fa-home"></i> <span Multi_lang="menu_home"></span></a></li>
-        <li><a href="register_elderly_support"><i class="fas fa-user-plus"></i> <span Multi_lang="menu_register_elderly"></span></a></li>
-        <li><a href="submit_request_support"><i class="fas fa-plus-circle"></i> <span Multi_lang="menu_submit_request"></span></a></li>
-        <li><a href="track_request_support"><i class="fas fa-search"></i> <span Multi_lang="menu_track_request"></span></a></li>
-        <li><a href="list_shops_support"><i class="fas fa-store"></i> <span Multi_lang="menu_list_shops"></span></a></li>
-        <li><a href="register_shop_support"><i class="fas fa-store-alt"></i> <span Multi_lang="menu_register_shop"></span></a></li>
-        <li><a href="list_shop_products"><i class="fas fa-boxes"></i> <span Multi_lang="menu_list_shop_products"></span></a></li>
-        
-        <li class="menu-title" Multi_lang="account_menu"></li>
-        <li><a href="Profile"><i class="fas fa-user-circle"></i> <span Multi_lang="menu_profile"></span></a></li>
-        <li><a href="Logout" class="logout"><i class="fas fa-sign-out-alt"></i> <span Multi_lang="menu_logout"></span></a></li>
-    </ul>
-</aside>
-</div>
-';
-        break;
+//    case '4':
+//        echo '
+//<div class="col-sm-2 col-lg-2 col-xl-2">
+//<aside class="sidebar col-md-3 col-lg-2 sidebar" id="sidebar">
+//    <div class="sidebar-header">
+//        <button class="close-sidebar-btn" id="closeSidebarBtn">
+//            <i class="fas fa-times"></i>
+//        </button>
+//    </div>
+//
+//    <div class="user-profile-card">
+//        <div class="avatar-container">
+//            <img src="assets/images/avatar.png" alt="User Avatar" class="user-avatar">
+//            <span class="status-dot"></span>
+//        </div>
+//        <div class="user-info">
+//            <h4 class="user-name">'. $_SESSION['name'] .'</h4>
+//            <p class="user-role" Multi_lang="support_role"></p>
+//        </div>
+//    </div>
+//
+//    <ul class="sidebar-menu">
+//        <li class="menu-title" Multi_lang="main_menu"></li>
+//        <li><a href="dashboard" class="active"><i class="fas fa-home"></i> <span Multi_lang="menu_home"></span></a></li>
+//        <li><a href="register_elderly_support"><i class="fas fa-user-plus"></i> <span Multi_lang="menu_register_elderly"></span></a></li>
+//        <li><a href="submit_request_support"><i class="fas fa-plus-circle"></i> <span Multi_lang="menu_submit_request"></span></a></li>
+//        <li><a href="track_request_support"><i class="fas fa-search"></i> <span Multi_lang="menu_track_request"></span></a></li>
+//        <li><a href="list_shops_support"><i class="fas fa-store"></i> <span Multi_lang="menu_list_shops"></span></a></li>
+//        <li><a href="register_shop_support"><i class="fas fa-store-alt"></i> <span Multi_lang="menu_register_shop"></span></a></li>
+//        <li><a href="list_shop_products"><i class="fas fa-boxes"></i> <span Multi_lang="menu_list_shop_products"></span></a></li>
+//
+//        <li class="menu-title" Multi_lang="account_menu"></li>
+//        <li><a href="Profile"><i class="fas fa-user-circle"></i> <span Multi_lang="menu_profile"></span></a></li>
+//        <li><a href="Logout" class="logout"><i class="fas fa-sign-out-alt"></i> <span Multi_lang="menu_logout"></span></a></li>
+//    </ul>
+//</aside>
+//</div>
+//';
+//        break;
 
     //default (سایر کاربران / صفحات عمومی)
     default:
