@@ -2,6 +2,8 @@
 require_once '../layout/session/session.php';
 require_once '../layout/Html/StartHtml.php';
 require_once '../layout/Head/Head.php';
+require_once '../db/Connect.php';
+
 $denied = [2, 6];
 if (in_array($_SESSION['level'], $denied)) {
     header("Location: error_404");
@@ -13,13 +15,16 @@ if (in_array($_SESSION['level'], $denied)) {
 }
 ?>
     <body>
-    <?php
-    require_once '../layout/Header/Header.php';
-    require_once '../layout/Menu/Menu.php';
-    ?>
-    <div class="wrapper">
-        <div id="loader"></div>
+    <div class="row">
+
         <?php
+        require_once '../layout/Header/Header.php';
+        require_once '../layout/Menu/Menu.php';
+        ?>
+
+    <?php
+        $UserId = $_SESSION['user_id'];
+
         if ($_SESSION['level'] == 0) {
             require_once '../layout/U/Super_Admin.php';
         } else {
@@ -46,7 +51,6 @@ if (in_array($_SESSION['level'], $denied)) {
 
         }
         ?>
-    </div>
 
     <?php
     require_once '../layout/Js/Js.php';
